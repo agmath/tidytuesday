@@ -36,6 +36,7 @@ detectors %>%
   geom_boxplot(aes(x = .pred_AI,
                    y = detector,
                    fill = detector)) +
+  scale_x_log10() +
   facet_wrap(~ type) +
   labs(title = "AI Detector Performance on Writing Samples", 
        subtitle = "Native and Non-Native English Speakers (left), Machine-generated text (right)",
